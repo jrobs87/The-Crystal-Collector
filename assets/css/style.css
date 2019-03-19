@@ -1,0 +1,12 @@
+body {
+    color: cyan;
+    background: black;
+    text-align: center;
+    
+}
+
+#winCounter {
+    padding: 1em;
+    border: 2px solid cyan;
+    border-radius: 1em;
+}
