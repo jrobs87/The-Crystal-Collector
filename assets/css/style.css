@@ -1,12 +1,30 @@
 body {
-    color: cyan;
+    color: white;
     background: black;
     text-align: center;
-    
+    padding-top: 5vh;
 }
 
-#winCounter {
-    padding: 1em;
-    border: 2px solid cyan;
-    border-radius: 1em;
+
+.gem {
+    font-size: 3em;
+    margin: 0.5em;
+    background: none;
+    border: none;
+}
+
+.blue {
+color: cyan;
+}
+
+.purple {
+color: magenta;
+}
+
+.green {
+color: greenyellow;
+}
+
+.yellow {
+    color: yellow;
 }

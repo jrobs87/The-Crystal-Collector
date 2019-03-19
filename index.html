@@ -9,23 +9,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <h1>The Chrystal Collector Game</h1>
+    <h1>The Crystal Collector Game</h1>
     <div class="container">
-        <div class="row">
-            
+        <div class="row" style="min-height: 10vh">
+                <div id="instructions" class="col">
+Run them jewels fast!
+                </div>
         </div>
-    <div id="instructions"></div>
-    <div id="game">
-        <div id="randomNumber">
-            <h3>Random Number</h3>
-        </div>
-        <div id="winCounter">
+        <div id="game" class="row" style="min-height: 10vh">
+            <div id="randomNumber" class="col-4">
+                <h3>Random Number</h3>
+                55
+            </div>
+            <div id="score" class="col-4"></div>
+            <div id="winCounter" class="col-4">
                 <table>
                     <tr>
                         <td>Wins:</td>
@@ -36,11 +41,19 @@
                         <td>0</td>
                     </tr>
                 </table>
-           
-        </div>
-        <div id="score"></div>
+            </div>
+            </div>
     </div>
-</div>
+            <div id="gems" class="container" >
+                <div class="row" style="min-height: 10vh">
+                    <button class="gem col blue" value="1"><i class="far fa-gem"></i></button>
+                    <button class="gem col green" value="5"><i class="far fa-gem"></i></button>
+                    <button class="gem col purple" value="2"><i class="far fa-gem"></i></button>
+                    <button class="gem col yellow" value="10"><i class="far fa-gem"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
