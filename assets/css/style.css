@@ -5,12 +5,20 @@ body {
     padding-top: 5vh;
 }
 
-
 .gem {
-    font-size: 3em;
-    margin: 0.5em;
+    border-radius: 50%;
+    font-size: 2.5em;
+    margin: 0%;
     background: none;
     border: none;
+    height: 2em;
+    width: 2em;
+    border: 1px solid black;
+}
+
+.gem:hover {
+    border: 1px solid white;
+    transition-duration: 0.6s;
 }
 
 .blue {
