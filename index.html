@@ -17,6 +17,10 @@
 </head>
 
 <body>
+    <!-- <canvas id="world">
+        <button class="newGame">New Game</button>
+    </canvas> -->
+
     <h1>The Crystal Collector Game</h1>
     <div class="container">
         <div class="row" style="min-height: 10vh">
@@ -25,20 +29,22 @@
             </div>
         </div>
         <div id="game" class="row" style="min-height: 10vh">
-            <div id="randomNumber" class="col-4">
+            <div class="col-4">
                 <h3>Random Number</h3>
-                55
+                <div id="randomNumber"></div>
+                <h3>Your Number</h3>
+                <div id="userNumber"></div>
             </div>
             <div id="score" class="col-4"></div>
             <div id="winCounter" class="col-4">
                 <table>
                     <tr>
                         <td>Wins:</td>
-                        <td>0</td>
+                        <td id='wins'>0</td>
                     </tr>
                     <tr>
                         <td>Losses:</td>
-                        <td>0</td>
+                        <td id='losses'>0</td>
                     </tr>
                 </table>
             </div>
