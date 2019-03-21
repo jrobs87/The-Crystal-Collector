@@ -1,4 +1,10 @@
+@font-face {
+    font-family: geomanist;
+    src: url(geomanist-extralight-webfont.woff);
+}
+
 body {
+    font-family: 'geomanist';
     color: white;
     background: black;
     text-align: center;
