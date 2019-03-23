@@ -8,12 +8,33 @@ let lossCount = 0;
 $(document).ready(function () {
     // RANDOM NUMBER GENERATOR - Populating our random number
     function randomNumberGen() {
-        randomNumber = Math.ceil(Math.random() * 50);
+        randomNumber = Math.ceil(Math.random() * (120 - 19) + 19);
         $('#randomNumber').text(randomNumber);
         userNumber = 0; // Set the user number to zero for a new game
         $('#userNumber').text(userNumber); // insert 0 user number into html
         console.log('The random number is ' + randomNumber);
     };
+
+    function gemNumberGen() {
+        numbersUsed = [];
+        gemArray = ['.blue', '.green', '.purple', '.yellow']; //corresponding to gem classes
+        for (i = 0; i < gemArray.length; i++) {
+            number = Math.ceil(Math.random() * (12 - 1) + 1); // generating a number between 1-12
+            // Begin Number Validation to insure unqie gem values - this kinda works but not really....
+            for (n = 0; n < numbersUsed.length; n++) {
+                if (numbersUsed[n] === number) {
+                    console.log('Duplicate gem value caught');
+                    number = Math.ceil(Math.random() * (12 - 1) + 1);
+                };
+            };
+            // End Number Validation
+            
+            numbersUsed.push(number);
+            $(gemArray[i]).val(number);
+        };
+        console.log(numbersUsed);
+    };
+
 
     // CHECK WIN CONDITIONS - checks to see if the user number equals the random number for the win 
     function winCheck() {
@@ -44,6 +65,9 @@ $(document).ready(function () {
     });
 
     randomNumberGen();
+    gemNumberGen();
+
+
 });
 
 

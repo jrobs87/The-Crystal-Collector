@@ -29,22 +29,24 @@
             </div>
         </div>
         <div id="game" class="row" style="min-height: 10vh">
-            <div class="col-4">
-                <h3>Random Number</h3>
-                <div id="randomNumber"></div>
-                <h3>Your Number</h3>
-                <div id="userNumber"></div>
-            </div>
-            <div id="score" class="col-4"></div>
-            <div id="winCounter" class="col-4">
+            <div class="col-sm">
                 <table>
                     <tr>
-                        <td>Wins:</td>
-                        <td id='wins'>0</td>
+                        <td class="info">
+                            Target Number: 
+                        </td>
+                        <td class="info">
+                            <span id="randomNumber"></span>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Losses:</td>
-                        <td id='losses'>0</td>
+                        <td class="info">
+                            Your Number: 
+                        </td>
+                        <td class="info">
+                            <span id="userNumber"></span>
+                        </td>
+
                     </tr>
                 </table>
             </div>
@@ -53,11 +55,24 @@
     <div id="gems" class="container">
         <div class="row" style="min-height: 10vh">
             <div class="col-sm-12">
-                <button class="gem blue" value="1"><i class="far fa-gem"></i></button>
-                <button class="gem green" value="2"><i class="far fa-gem"></i></button>
-                <button class="gem purple" value="5"><i class="far fa-gem"></i></button>
-                <button class="gem yellow" value="10"><i class="far fa-gem"></i></button>
+                <button class="gem blue" value=""><i class="far fa-gem"></i></button>
+                <button class="gem green" value=""><i class="far fa-gem"></i></button>
+                <button class="gem purple" value=""><i class="far fa-gem"></i></button>
+                <button class="gem yellow" value=""><i class="far fa-gem"></i></button>
             </div>
+            <div id="winCounter">
+                    <table>
+                        <tr>
+                                <td class="info">Wins:</td>
+                            <td id='wins' class="info">0</td>
+                        </tr>
+                        <tr>
+                                <td class="info">Losses:</td>
+                            <td id='losses' class="info">0</td>
+                        </tr>
+                    </table>
+                </div>
+
         </div>
     </div>
     </div>
