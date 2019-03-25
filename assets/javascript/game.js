@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     console.log('You Enjoy Myself'); // just for fun - logs js file and jquery loaded
 
+    // defining variables
     let input = 0;
     let randomNumber = 0;
     let userNumber = 0;
@@ -29,7 +30,7 @@ $(document).ready(function () {
         for (i = 0; i < gemArray.length; i++) {
             number = Math.ceil(Math.random() * (12 - 1) + 1); // generating a number between 1-12
             // Begin Number Validation to insure unique gem values - this kinda works but not really.... 
-            // Most of the time it's fine but does cause duplicates still occasionally - while loop may be a better option...
+            // Most of the time it's fine but does cause duplicates still on occasion - while loop may be a better option...
             for (n = 0; n < numbersUsed.length; n++) {
                 if (numbersUsed[n] === number) {
                     console.log('Duplicate gem value caught');
@@ -53,12 +54,15 @@ $(document).ready(function () {
             console.log('You won!');
             winCount++;
             $('#wins').text(winCount);
+            $('#hints').text('You won! Click a Gem to start a new game!')
             randomNumberGen();
             gemNumberGen();
+
         } else if (userNumber > randomNumber) {
             console.log('You went over.');
             lossCount++;
             $('#losses').text(lossCount);
+            $('#hints').text('You lost! Click a Gem to start a new game!')
             randomNumberGen();
             gemNumberGen();
         };
@@ -68,15 +72,17 @@ $(document).ready(function () {
     // CAPTURE USER INPUT - getting out user input here - clicking gem buttons stores the associated html attribute value
     $('.gem').click(function () {
         input = parseInt(($(this).val())); // stores value and converts to an integer
-        
+
         userNumber = userNumber + input; // update UserNumber 
         $('#userNumber').text(userNumber); // update UserNumber text field
 
         $('#hints').text('This gem is worth ' + input + ' points.'); // Displays the hint
         console.log('This gem is worth ' + input + ' points. Your number so far is ' + userNumber); // logs the hint and the point total
-        
+
         winCheck(); // check for win conditions
     });
+
+    // ========== BEGIN BUTTONS ==========
 
     // OPENING THE DIRECTIONS MODAL
     $('#directionsButton').click(function () {
@@ -91,6 +97,16 @@ $(document).ready(function () {
         console.log('Directions modal closed.');
     });
 
+    // RESETTING THE GAME
+    $('#resetButton').click(function () {
+        randomNumberGen(); // reset the number we are trying to guess
+        gemNumberGen(); // reset the random gem values
+        $('#hints').text('Game has been reset.  Click a Gem to play!')
+        console.log('Game has been reset.  Click a Gem to play!');
+    });
+
+    // ========== END BUTTONS ==========
+
     // BEGIN GAME - calls random number generators and starts the game
     randomNumberGen(); // initialize the number we are trying to guess
     gemNumberGen(); // initilize the random gem values
@@ -98,6 +114,4 @@ $(document).ready(function () {
 
 });
 
-
-// CONFETTI
 

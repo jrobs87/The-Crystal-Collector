@@ -9,8 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>The Crystal Collector</title>
@@ -25,15 +27,16 @@
             Try to match the target number by clicking them gems below.
             Each gem is worth a secret number of points, randomly assigned at the beginning of the game.
             If your number matches the target number, you win! If yours exceeds the target number, you lose!
+            If you get stuck, just click Reset to launch a new game!
             <br>
             <button id="close">Close</button>
         </div>
     </div>
-     <!-- end hidden directions modal -->
+    <!-- end hidden directions modal -->
 
-    <h1 style="margin: 1em 0em 1em 0em">The Crystal Collector</h1>
+    <h1 style="margin: .5em 0em 0em 0em">The Crystal Collector</h1>
 
-    <div id="hints" style="height: 1em;"></div>
+    <div id="hints" style="height: 1.5em;">Click a Gem to begin.</div>
 
     <!-- begin bootstrap container -->
     <div class="container">
@@ -92,22 +95,38 @@
     </div>
     <!-- end bootstrap container -->
 
-    <!-- directions modal button -->
-    <button id="directionsButton">
-        Directions
-    </button>
+    <!-- begin directions modal and reset buttons -->
+    <table>
+        <tr>
+            <td>
+                <button id="directionsButton" class="buttons">
+                    Directions
+                </button>
+            </td>
+            <td>
+                <button id="resetButton" class="buttons">
+                    Reset
+                </button>
+            </td>
+        </tr>
+    </table>
+    <!-- end directions modal and reset buttons -->
 
-    <!-- Optional JavaScript -->
+    <!-- ========== JS FILES ========== -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
     <script src="assets/javascript/game.js"></script>
 </body>
 

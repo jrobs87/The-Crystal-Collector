@@ -1,11 +1,12 @@
-/* @font-face here */
+/* ========== @FONT-FACE ========== */
 
 @font-face {
     font-family: geomanist;
     src: url(geomanist-extralight-webfont.woff);
 }
 
-/* begin global styles */
+/* ========== BEGIN GLOBAL STYLES ========== */
+
 body {
     font-family: 'geomanist';
     color: white;
@@ -25,17 +26,46 @@ button:focus {
 .visible {
     visibility: visible;
 }
-/* end global styles */
 
-/* begin directions modal styles */
-#directionsButton {
+/* ========== END GLOBAL STYLES ========== */
+
+/* ========== BEGIN SPECIFIC ELEMENT STYLES ========== */
+
+#winCounter {
+    margin-top: 3em;
+}
+
+#hints {
+    color: grey;
+    opacity: 0.55;
+    font-size: 1.5em;
+}
+
+.buttons {
     border-radius: 2em;
     background: black;
     color: greenyellow;
     font-size: 1em;
     padding: .2em 1em .2em 1em;
-    margin-top: 2em;
+    margin: 2em 1em 0em 1em;
 }
+
+.info {
+    font-size: 2em;
+    padding: 0em .5em 0em .5em;
+}
+
+table {
+    margin: auto;
+}
+
+#game {
+    padding: 4em 0em 4em 0em;
+}
+
+/* ========== END SPECIFIC ELEMENT STYLES ========== */
+
+/* ========== BEGIN DIRECTIONS MODAL STYLES ========== */
 
 #instructions {
     width: 100%;
@@ -50,7 +80,7 @@ button:focus {
     border-radius: 1em;
     text-align: left;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 15%;
     width: 90%;
     max-width: 30em;
     padding: 1em;
@@ -62,22 +92,10 @@ button:focus {
     color: greenyellow;
     border: none;
 }
-/* end directions modal styles */
 
-.info {
-    font-size: 1.75em;
-    padding: 0em .5em 0em .5em;
-}
+/* ========== END END SIRECTINS MODAL STYLES ========== */
 
-table {
-    margin: auto;
-}
-
-#game {
-    padding: 4em 0em 4em 0em;
-}
-
-/* ========== Begin Gem Styling ========== */
+/* ========== BEGIN GEM STYLES ========== */
 
 .gems {
     padding: 2em 0em 2em 0em;
@@ -115,12 +133,4 @@ table {
     color: yellow;
 }
 
-/* ========== End Gem Styling ========== */
-
-#winCounter {
-    margin-top: 3em;
-}
-
-#hints {
-    color: grey;
-}
+/* ========== END GEM STYLES ========== */
