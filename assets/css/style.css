@@ -38,7 +38,6 @@ button:focus {
 #hints {
     color: grey;
     opacity: 0.55;
-    font-size: 1.5em;
 }
 
 .buttons {
@@ -80,7 +79,7 @@ table {
     border-radius: 1em;
     text-align: left;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     width: 90%;
     max-width: 30em;
     padding: 1em;
