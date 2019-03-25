@@ -17,19 +17,26 @@
 </head>
 
 <body>
-    <!-- <canvas id="world">
-        <button class="newGame">New Game</button>
-    </canvas> -->
 
-    <h1>The Crystal Collector Game</h1>
-    <div class="container">
-        <div class="row" style="min-height: 10vh">
-            <div id="instructions" class="col">
-                Run them jewels fast!
+
+        <div id="instructions">
+                <div id="instructionsBlurb">
+                    <h3>Directions</h3>
+                    Try to match the target number by clicking them gems below.
+                    Each gem is worth a secret number of points, randomly assigned at the beginning of the game.
+                    If your number matches the target number, you win! If yours exceeds the target number, you lose!
+                    <br>
+                    <button id="close">Close</button>
+                </div>
             </div>
-        </div>
+
+    <h1 style="margin: 1em 0em 1em 0em">The Crystal Collector</h1>
+
+
+    <!-- begin bootstrap container -->
+    <div class="container">
         <div id="game" class="row" style="min-height: 10vh">
-            <div class="col-sm">
+            <div class="col-sm-12">
                 <table>
                     <tr>
                         <td class="info">
@@ -51,40 +58,49 @@
                 </table>
             </div>
         </div>
-    </div>
-    <div id="gems" class="container">
+
+        <!-- begin gem buttons -->
         <div class="row" style="min-height: 10vh">
-            <div class="col-sm-12">
+            <div class="col">
                 <button class="gem blue" value=""><i class="far fa-gem"></i></button>
                 <button class="gem green" value=""><i class="far fa-gem"></i></button>
                 <button class="gem purple" value=""><i class="far fa-gem"></i></button>
                 <button class="gem yellow" value=""><i class="far fa-gem"></i></button>
             </div>
-            <div id="winCounter">
-                <table>
-                    <tr>
-                        <td class="info">Wins:</td>
-                        <td id='wins' class="info">0</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Losses:</td>
-                        <td id='losses' class="info">0</td>
-                    </tr>
-                </table>
-            </div>
-
         </div>
-    </div>
-    </div>
-    </div>
+        <!-- end gem buttons -->
 
+        <div class="row">
+            <div class="col">
+                <div id="winCounter">
+                    <table>
+                        <tr>
+                            <td class="info">Wins:</td>
+                            <td id='wins' class="info">0</td>
+                            <td class="info">Losses:</td>
+                            <td id='losses' class="info">0</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- end bootstrap container -->
+
+
+    <button id="directionsButton">
+        Directions
+    </button>
 
    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

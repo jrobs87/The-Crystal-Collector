@@ -15,11 +15,67 @@ button:focus {
     outline: none;
 }
 
-.info {
-    font-size: 2em;
-    padding-right: 1em;
+.hidden {
+    visibility: hidden;
 }
 
+.visible {
+    visibility: visible;
+}
+
+#directionsButton {
+    position: absolute;
+    background: white;
+    border-radius: 2em;
+    color: black;
+    font-size: 1em;
+    padding: .2em 1em .2em 1em;
+    bottom: 1em;
+    left: 1em;
+}
+
+#instructions {
+   width: 100%;
+   height: 100vh;
+   z-index: 10;
+   position: fixed;
+   visibility: visible;
+   background: black;
+}
+
+#instructionsBlurb {
+    border: 1px solid white;
+    border-radius: 1em;
+    text-align: left;
+    margin: auto;
+    margin-top: 20%;
+    width: 30em;
+    padding: 1em;
+}
+
+#close {
+    margin-top: 1em;
+    background: none;
+    color: greenyellow;
+    border: none;
+}
+
+.info {
+    font-size: 1.75em;
+    padding: 0em .5em 0em .5em;
+}
+
+table {
+    margin: auto;
+}
+
+.gems {
+    padding: 2em 0em 2em 0em;
+}
+#game {
+    padding: 4em 0em 4em 0em;
+}
+/* ========== Begin Gem Styling ========== */
 .gem {
     border-radius: 50%;
     font-size: 2.5em;
@@ -51,20 +107,5 @@ button:focus {
 .yellow {
     color: yellow;
 }
-
-#world {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    left: 0;
-    top: 0;
-    visibility: hidden;
-    transition-duration: 1s;
-}
-
-.newGame {
-    color: white;
-    background: red;
-    z-index: 11;
-}
+/* ========== End Gem Styling ========== */
 
