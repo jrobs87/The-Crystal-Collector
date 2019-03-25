@@ -87,7 +87,7 @@ table {
 }
 
 #close {
-    margin-top: 1em;
+    padding-left: 0em;
     background: none;
     color: greenyellow;
     border: none;
