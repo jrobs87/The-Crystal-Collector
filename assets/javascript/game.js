@@ -40,12 +40,12 @@ $(document).ready(function () {
 
             // Adds random gem values to an array to check for non-unique values
             numbersUsed.push(number);
+
             // Inserts values into each gem's HTML value attribute
             $(gemArray[i]).val(number);
         };
         console.log(numbersUsed);
     };
-
 
     // CHECK WIN CONDITIONS - checks to see if the user number equals the random number for the win 
     function winCheck() {
@@ -76,11 +76,23 @@ $(document).ready(function () {
         winCheck();
     });
 
+    // OPENING THE DIRECTIONS MODAL
+    $('#directionsButton').click(function () {
+        $('#instructions').removeClass("hidden");
+        console.log('Directions modal opened.');
+    });
+
+    // CLOSING THE DIRECTIONS MODAL
+    $('#close').click(function () {
+        $('#instructions').removeClass("visible");
+        $('#instructions').addClass("hidden");
+        console.log('Directions modal closed.');
+    });
+
     // BEGIN GAME - calls random number generators and starts the game
     randomNumberGen(); // initialize the number we are trying to guess
     gemNumberGen(); // initilize the random gem values
-    console.log('The game begins!');// begins game
-
+    console.log('The game begins!'); // begins game
 
 });
 
