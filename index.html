@@ -13,25 +13,27 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Hello, world!</title>
+    <title>The Crystal Collector</title>
 </head>
 
 <body>
 
-        <div id="instructions" class="hidden">
-                <div id="instructionsBlurb">
-                    <h3>Directions</h3>
-                    Try to match the target number by clicking them gems below.
-                    Each gem is worth a secret number of points, randomly assigned at the beginning of the game.
-                    If your number matches the target number, you win! If yours exceeds the target number, you lose!
-                    <br>
-                    <button id="close">Close</button>
-                </div>
-            </div>
-        
+    <!-- begin hidden directions modal -->
+    <div id="instructions" class="hidden">
+        <div id="instructionsBlurb">
+            <h3>Directions</h3>
+            Try to match the target number by clicking them gems below.
+            Each gem is worth a secret number of points, randomly assigned at the beginning of the game.
+            If your number matches the target number, you win! If yours exceeds the target number, you lose!
+            <br>
+            <button id="close">Close</button>
+        </div>
+    </div>
+     <!-- end hidden directions modal -->
 
     <h1 style="margin: 1em 0em 1em 0em">The Crystal Collector</h1>
 
+    <div id="hints" style="height: 1em;"></div>
 
     <!-- begin bootstrap container -->
     <div class="container">
@@ -70,6 +72,7 @@
         </div>
         <!-- end gem buttons -->
 
+        <!-- begin win counter -->
         <div class="row">
             <div class="col">
                 <div id="winCounter">
@@ -82,19 +85,17 @@
                         </tr>
                     </table>
                 </div>
-                
             </div>
         </div>
+        <!-- end win counter -->
 
     </div>
     <!-- end bootstrap container -->
 
-
+    <!-- directions modal button -->
     <button id="directionsButton">
         Directions
     </button>
-
-   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

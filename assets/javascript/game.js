@@ -68,12 +68,14 @@ $(document).ready(function () {
     // CAPTURE USER INPUT - getting out user input here - clicking gem buttons stores the associated html attribute value
     $('.gem').click(function () {
         input = parseInt(($(this).val())); // stores value and converts to an integer
-        // update UserNumber 
-        userNumber = userNumber + input;
-        $('#userNumber').text(userNumber);
-        console.log('This gem is worth ' + input + ' points. Your number so far is ' + userNumber);
-        // check for win conditions
-        winCheck();
+        
+        userNumber = userNumber + input; // update UserNumber 
+        $('#userNumber').text(userNumber); // update UserNumber text field
+
+        $('#hints').text('This gem is worth ' + input + ' points.'); // Displays the hint
+        console.log('This gem is worth ' + input + ' points. Your number so far is ' + userNumber); // logs the hint and the point total
+        
+        winCheck(); // check for win conditions
     });
 
     // OPENING THE DIRECTIONS MODAL
